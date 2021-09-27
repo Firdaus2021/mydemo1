@@ -23,7 +23,7 @@ from flask import Flask,render_template,request
 app=Flask(__name__)
 @app.route('/')
 def a1():
-    return render_template("E:F123.html")
+    return render_template("F123.html")
 @app.route('/metro',methods=['GET','POST'])
 def a2():
     if (request.method=='POST'):
@@ -32,7 +32,7 @@ def a2():
         Marketing_Spend=int(request.form['mar'])
         result=model.predict([[RD_Spend,Administration,Marketing_Spend]])
         print(result)
-        return render_template("E:F123.html",tables=result)
+        return render_template("F123.html",tables=result)
 if __name__ == '__main__':
     app.run()
 
