@@ -13,7 +13,7 @@ xtrain,xtest,ytrain,ytest=train_test_split(x,y,train_size=0.80)
 from sklearn.linear_model import LinearRegression
 model=LinearRegression()
 model.fit(xtrain,ytrain)
-ypred=model.predict(xtest)
+
 
 
 # In[ ]:
