@@ -30,7 +30,6 @@ def a2():
         Administration=int(request.form['adm'])
         Marketing_Spend=int(request.form['mar'])
         result=model.predict([[RD_Spend,Administration,Marketing_Spend]])
-        print(result)
         return render_template("F123.html",tables=result)
 if __name__ == '__main__':
     firdaus.run()
