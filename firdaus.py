@@ -19,11 +19,11 @@ model.fit(xtrain,ytrain)
 
 
 from flask import Flask,render_template,request
-app=Flask(__name__)
-@app.route('/')
+firdaus=Flask(__name__)
+@firdaus.route('/')
 def a1():
     return render_template("F123.html")
-@app.route('/hello',methods=['GET','POST'])
+@firdaus.route('/hello',methods=['GET','POST'])
 def a2():
     if (request.method=='POST'):
         RD_Spend=int(request.form['rd'])
@@ -33,7 +33,7 @@ def a2():
         print(result)
         return render_template("F123.html",tables=result)
 if __name__ == '__main__':
-    app.run()
+    firdaus.run()
 
 
 # In[ ]:
