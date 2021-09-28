@@ -15,8 +15,7 @@ model=LinearRegression()
 model.fit(xtrain,ytrain)
 
 
-
-# In[ ]:
+# In[2]:
 
 
 from flask import Flask,render_template,request
@@ -24,7 +23,7 @@ app=Flask(__name__)
 @app.route('/')
 def a1():
     return render_template("F123.html")
-@app.route('/metro',methods=['GET','POST'])
+@app.route('/hello',methods=['GET','POST'])
 def a2():
     if (request.method=='POST'):
         RD_Spend=int(request.form['rd'])
